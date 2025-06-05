@@ -17,16 +17,16 @@ class ListaDeRepositorios():
             return resposta.status_code
 
     def imprime_repositorios(self):
-        f = open("logins.txt", "x")
+        #f = open("logins.txt", "x")
         dados_api = self.requisicao_api()
 
         if type(dados_api) is not int:
-            with open("logins.txt", "a") as f:
+            with open("logins.txt", "w") as f:
                 for j in range(14):
                     self._valor = j + 1
                     dados_api = self.requisicao_api()
                     for i in range(len(dados_api)):
-                        f.write(dados_api[i]['login'] + "\n")
+                        f.write(dados_api[i]['login'] + " " + str(dados_api[i]['contributions']) + "\n")
 
             # open and read the file after the overwriting:
             with open("logins.txt") as f:
