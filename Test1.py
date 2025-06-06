@@ -8,7 +8,7 @@ class ListaDeRepositorios():
 
     def requisicao_api(self):
         resposta = requests.get(
-            f'https://api.github.com/repos/{self._usuario}/contributors?page={self._valor}')
+            f'https://api.github.com/repos/{self._usuario}/contributors?per_page=100&page={self._valor}')
 
         if resposta.status_code == 200:
             return resposta.json()
@@ -21,13 +21,13 @@ class ListaDeRepositorios():
 
         if type(dados_api) is not int:
             with open("usuarios.txt", "w") as f:
-                for j in range(15):
+                for j in range(1):
                     self._valor = j + 1
                     dados_api = self.requisicao_api()
                     for i in range(len(dados_api)):
-                        f.write(dados_api[i]['login'] + " " + str(dados_api[i]['contributions']) + "\n")
+                        f.write(dados_api[i]['login'] + ", " + str(dados_api[i]['contributions']) + "\n")
 
-                    if len(dados_api) == 0:
+                    if not dados_api:
                         print("Nenhum login foi encontrado na lista!")
 
             # open and read the file after the overwriting:
@@ -40,8 +40,10 @@ class ListaDeRepositorios():
 
 #repositorios = ListaDeRepositorios('arendst/Tasmota')
 #repositorios.imprime_repositorios()
-#https://api.github.com/repos/arendst/Tasmota/contributors?page=1
+#https://api.github.com/repos/arendst/Tasmota/contributors?per_page=100&page=1
 
-#with open("projetos.csv") as f:
- # for x in f:
-  #  print(x)
+with open("projetos.txt") as f:
+  for x in f:
+    print(x.strip())
+    repositorios = ListaDeRepositorios(x)
+    repositorios.imprime_repositorios()
