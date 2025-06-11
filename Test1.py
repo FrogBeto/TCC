@@ -1,6 +1,11 @@
 import requests
 import json
 
+token = ""
+headers = {
+    "Authorization": "token {}".format(token)
+}
+
 class ListaDeRepositorios():
     def __init__(self, usuario):
         self._usuario = usuario
@@ -8,7 +13,7 @@ class ListaDeRepositorios():
 
     def requisicao_api(self):
         resposta = requests.get(
-            f'https://api.github.com/repos/{self._usuario}/contributors?per_page=100&page={self._valor}')
+            f'https://api.github.com/repos/{self._usuario}/contributors?per_page=100&page={self._valor}', headers=headers)
 
         if resposta.status_code == 200:
             return resposta.json()
@@ -21,7 +26,7 @@ class ListaDeRepositorios():
 
         if type(dados_api) is not int:
             with open("usuarios.txt", "w") as f:
-                for j in range(1):
+                for j in range(6):
                     self._valor = j + 1
                     dados_api = self.requisicao_api()
                     for i in range(len(dados_api)):
@@ -29,6 +34,7 @@ class ListaDeRepositorios():
 
                     if not dados_api:
                         print("Nenhum login foi encontrado na lista!")
+                        break
 
             # open and read the file after the overwriting:
             with open("usuarios.txt") as f:
@@ -37,13 +43,26 @@ class ListaDeRepositorios():
         else:
             print(dados_api)
 
-
+#Teste para um repositório
 #repositorios = ListaDeRepositorios('arendst/Tasmota')
 #repositorios.imprime_repositorios()
+#URL base com o repositorio, requisição, número por páginas e número da página
 #https://api.github.com/repos/arendst/Tasmota/contributors?per_page=100&page=1
 
-with open("projetos.txt") as f:
-  for x in f:
-    print(x.strip())
-    repositorios = ListaDeRepositorios(x)
-    repositorios.imprime_repositorios()
+#Lê o arquivo de projetos e faz a coleta de dados
+#with open("projetos.txt") as f:
+ # for x in f:
+  #  print(x.strip())
+   # repositorios = ListaDeRepositorios(x)
+    #repositorios.imprime_repositorios()
+
+#Teste de limite de requisições e limite de requisições autenticadas (com headers), além de entender melhor a estrutura da API
+#data = requests.get(f' https://api.github.com/rate_limit').json()
+#print(data['resources']['core']['remaining'])
+
+#Teste de for
+for i in range(10):
+    for j in range(6):
+        if j > 4:
+            print("Teste")
+            break
