@@ -29,7 +29,7 @@ class Busca:
     #responsavel pela requisição, retornando o valor ou o código de erro, caso tenha
     def requisicao(self):
         reposta = requests.get(
-            f'https://api.github.com/repos/{self.dono}/{self.projeto}/contributors?per_page=100&page={self.valor}',
+            f'https://api.github.com/repos/{self.dono}/{self.projeto}',
             headers=headers
         )
 
@@ -43,16 +43,30 @@ class Busca:
         dados = self.requisicao()
 
         if type(dados) is not int:
-            with open("usuarios.csv", "a") as f:
-                while dados:
-                    for i in range(len(dados)):
-                        f.write(dados[i]['login'] + "," + str(dados[i]['contributions']) + "," + self.projeto + "\n")
+            with open("repositorios.csv", "a") as f:
+                f.write(
+                    self.projeto + "," + self.dono + "," + dados['languages_url'] + "," + dados['created_at'] + "," +
+                    dados['updated_at'] + "," + dados['pushed_at'] + "," + str(dados['size']) + "," +
+                    str(dados['stargazers_count']) + "," + str(dados['watchers_count']) + "," + dados['language'] + "," +
+                    str(dados['forks_count']) + "," + str(dados['open_issues_count']) + "," + str(dados['subscribers_count']) + "\n")
+
+                #while dados:
+                    #for i in range(len(dados)):
+                        #f.write(dados[i]['login'] + "," + str(dados[i]['contributions']) + "," + self.projeto + "\n")
 
                     #Atualiza a página e refaz a requisição
-                    self.valor += 1
-                    dados = self.requisicao()
+                    #self.valor += 1
+                    #dados = self.requisicao()
+
 
 #Responsavel por percorrer o vetor de donos e seus projetos, fazendo uma requisição a cada novo projeto
 for x in range(len(donos)):
     repositorios = Busca(donos[x], projetos[x])
     repositorios.gravacao()
+
+
+#Links já utilizados:
+#https://api.github.com/repos/{self.dono}/{self.projeto}/contributors?per_page=100&page={self.valor}
+#--> Gerou usuarios.csv
+#https://api.github.com/repos/{self.dono}/{self.projeto}
+#--> Gerou repositorios.csv
