@@ -1,16 +1,58 @@
-# This is a sample Python script.
+import pandas as pd
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#Token de identificação da requisição - aumenta o limite por hora
+token = ""
+headers = {
+    "Authorization": "token {}".format(token)
+}
 
+#Leitura do csv com os projetos e criação dos vetores para armazenar os donos dos repositórios e os seus projetos
+df = pd.read_csv('projetos.csv')
+donos = []
+projetos = []
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#Criação da lista de donos e projetos
+for x in df['Dono']:
+    donos.append(x)
+for x in df['Projeto']:
+    projetos.append(x)
 
+#Classe responsavel por receber o nome do dono e do projeto e fazer a requisição para a api do GitHub
+class Busca:
+    #Atribuindo os valores
+    def __init__(self, dono, projeto):
+        self.dono = dono
+        self.projeto = projeto
+        self.valor = 1
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    #responsavel pela requisição, retornando o valor ou o código de erro, caso tenha
+    def requisicao(self):
+        reposta = requests.get(
+            f'https://api.github.com/repos/{self.dono}/{self.projeto}/contributors?per_page=100&page={self.valor}',
+            headers=headers
+        )
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        if reposta.status_code == 200:
+            return reposta.json()
+        else:
+            return reposta.status_code
+
+    #Pede uma requisição e gravas os contribuidores, quantidade de contribuições e projeto de origem num cvs
+    def gravacao(self):
+        dados = self.requisicao()
+
+        if type(dados) is not int:
+            with open("usuarios.csv", "a") as f:
+                while dados:
+                    for i in range(len(dados)):
+                        f.write(dados[i]['login'] + "," + str(dados[i]['contributions']) + "," + self.projeto + "\n")
+
+                    #Atualiza a página e refaz a requisição
+                    self.valor += 1
+                    dados = self.requisicao()
+
+#Responsavel por percorrer o vetor de donos e seus projetos, fazendo uma requisição a cada novo projeto
+for x in range(len(donos)):
+    repositorios = Busca(donos[x], projetos[x])
+    repositorios.gravacao()
