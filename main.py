@@ -29,7 +29,7 @@ class Busca:
     #responsavel pela requisição, retornando o valor ou o código de erro, caso tenha
     def requisicao(self):
         reposta = requests.get(
-            f'https://api.github.com/repos/{self.dono}/{self.projeto}',
+            f'https://api.github.com/users/{self.dono}',
             headers=headers
         )
 
@@ -43,12 +43,10 @@ class Busca:
         dados = self.requisicao()
 
         if type(dados) is not int:
-            with open("repositorios.csv", "a") as f:
+            with open("donos.csv", "a") as f:
                 f.write(
-                    self.projeto + "," + self.dono + "," + dados['languages_url'] + "," + dados['created_at'] + "," +
-                    dados['updated_at'] + "," + dados['pushed_at'] + "," + str(dados['size']) + "," +
-                    str(dados['stargazers_count']) + "," + str(dados['watchers_count']) + "," + dados['language'] + "," +
-                    str(dados['forks_count']) + "," + str(dados['open_issues_count']) + "," + str(dados['subscribers_count']) + "\n")
+                    self.dono + "," + dados['location'] + "," + str(dados['public_repos']) + "," + str(dados['followers']) + "," +
+                    str(dados['following']) + "," + dados['created_at'] + "," + dados['updated_at'] + "\n")
 
                 #while dados:
                     #for i in range(len(dados)):
@@ -70,3 +68,5 @@ for x in range(len(donos)):
 #--> Gerou usuarios.csv
 #https://api.github.com/repos/{self.dono}/{self.projeto}
 #--> Gerou repositorios.csv
+#https://api.github.com/users/{self.dono}
+#--> Gerou donos.csv
