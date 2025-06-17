@@ -44,9 +44,14 @@ class Busca:
 
         if type(dados) is not int:
             with open("donos.csv", "a") as f:
-                f.write(
-                    self.dono + "," + dados['location'] + "," + str(dados['public_repos']) + "," + str(dados['followers']) + "," +
-                    str(dados['following']) + "," + dados['created_at'] + "," + dados['updated_at'] + "\n")
+                if dados['location']:
+                    f.write(
+                        self.dono + "," + dados['location'] + "," + str(dados['public_repos']) + "," + str(dados['followers']) + "," +
+                        str(dados['following']) + "," + dados['created_at'] + "," + dados['updated_at'] + "\n")
+                else:
+                    f.write(
+                        self.dono + "," + "null" + "," + str(dados['public_repos']) + "," + str(dados['followers']) + "," +
+                        str(dados['following']) + "," + dados['created_at'] + "," + dados['updated_at'] + "\n")
 
                 #while dados:
                     #for i in range(len(dados)):
