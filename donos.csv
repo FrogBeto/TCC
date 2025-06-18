@@ -1,1 +1,32 @@
-login,location,public_repos,followers,following,created_at,updated_at
+login;projeto;location;public_repos;followers;following;created_at;updated_at
+arendst;Tasmota;Netherlands;30;1627;2;2015-02-17T12:44:21Z;2025-06-17T15:20:04Z
+localstack;localstack;NULL;93;1640;0;2017-05-16T13:12:26Z;2025-06-17T10:07:48Z
+th-ch;youtube-music;NULL;11;538;146;2014-06-30T09:03:03Z;2025-06-07T13:18:34Z
+n8n-io;n8n;Germany;39;6083;0;2018-11-30T12:19:59Z;2025-06-17T14:04:49Z
+discordjs;discord.js;https://discord.gg/djs;32;1274;0;2017-03-17T20:32:18Z;2025-06-03T11:43:06Z
+python-telegram-bot;python-telegram-bot;NULL;10;895;0;2015-12-06T16:42:34Z;2025-06-03T11:37:09Z
+ccxt;ccxt;NULL;28;740;0;2017-09-12T19:21:50Z;2024-08-14T02:31:40Z
+starship;starship;Deep space;7;414;0;2019-04-15T17:33:46Z;2025-05-28T12:15:28Z
+nvm-sh;nvm;NULL;4;811;0;2019-04-24T22:31:43Z;2025-06-15T10:21:59Z
+qbittorrent;qBittorrent;NULL;6;1137;0;2012-08-10T18:03:29Z;2025-06-11T11:24:28Z
+microsoft;TypeScript;Redmond, WA;6917;94880;0;2013-12-10T19:06:48Z;2025-06-06T20:30:56Z
+flutter;flutter;NULL;36;19619;0;2015-09-03T00:37:37Z;2024-07-18T11:54:42Z
+serverless;serverless;United States of America;71;796;0;2015-08-11T05:02:02Z;2025-06-12T18:49:21Z
+apache;flink;NULL;2789;18428;0;2009-01-17T20:14:40Z;2025-06-12T11:19:20Z
+babel;babel;Flavortown;63;924;0;2014-11-09T08:15:09Z;2025-06-05T11:32:17Z
+electron;electron;United States of America;104;3402;0;2015-07-19T23:17:47Z;2025-06-14T10:03:24Z
+neovim;neovim;NULL;30;3927;0;2014-01-22T13:24:15Z;2025-06-07T11:26:14Z
+twbs;bootstrap;San Francisco;26;12927;0;2012-11-29T05:47:03Z;2022-11-27T13:00:41Z
+supabase;supabase;United States of America;116;6362;0;2019-08-24T09:21:56Z;2025-06-12T05:19:40Z
+facebook;docusaurus;Menlo Park, California;149;30497;0;2009-04-02T03:35:22Z;2024-12-27T21:10:02Z
+matplotlib;matplotlib;NULL;53;1271;0;2010-03-04T18:24:32Z;2025-06-16T11:21:49Z
+facebook;react-native;Menlo Park, California;149;30497;0;2009-04-02T03:35:22Z;2024-12-27T21:10:02Z
+microsoft;vscode;Redmond, WA;6917;94880;0;2013-12-10T19:06:48Z;2025-06-06T20:30:56Z
+tensorflow;tensorflow;NULL;107;18721;0;2015-11-04T19:32:50Z;2024-07-18T11:54:43Z
+kubernetes;kubernetes;NULL;79;11394;0;2015-08-03T17:55:43Z;2024-08-28T00:31:39Z
+django;django;Internet;26;8570;0;2008-10-06T19:43:18Z;2025-05-18T11:20:27Z
+scikit-learn;scikit-learn;NULL;16;4726;0;2010-08-16T07:44:52Z;2025-01-27T15:11:19Z
+angular;angular;United States of America;205;7756;0;2009-10-13T22:16:19Z;2024-11-12T14:20:01Z
+huggingface;transformers;NYC + Paris;321;50308;0;2017-02-12T11:20:28Z;2025-04-20T10:15:40Z
+ansible;ansible;United States of America;284;3031;0;2012-03-06T14:55:51Z;2025-05-08T01:48:03Z
+pandas-dev;pandas;NULL;15;4736;0;2016-08-23T21:37:18Z;2025-06-12T11:34:25Z
