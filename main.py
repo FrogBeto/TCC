@@ -1,6 +1,5 @@
 import pandas as pd
 import requests
-import time
 
 #Token de identificação da requisição - aumenta o limite por hora
 token = ""

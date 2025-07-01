@@ -1,14 +1,33 @@
 import pandas as pd
+import requests
 
-df = pd.read_csv('dados.csv', sep=';')
+token = ""
+headers = {
+    "Authorization": "access_token {}".format(token)
+}
 
-df['created_at'] = pd.to_datetime(df['created_at']).dt.date
+df = pd.read_csv('dados2.csv', sep=';')
+locais = []
 
-df['updated_at'] = pd.to_datetime(df['updated_at']).dt.date
+for x in df['location']:
+    locais.append(x)
 
-#df['Push'] = pd.to_datetime(df['Push']).dt.date
+class Tratamento:
+    def __init__(self, localizacao):
+        self.localizacao = localizacao
 
-print(df.head())
+    def requisicao(self):
+        reposta = requests.get(
+            f'https://api.mapbox.com/search/geocode/v6/forward?q={self.localizacao}&limit=1',
+            headers=headers
+        )
 
-with open("dados2.csv", "a", encoding="utf-8") as f:
-    f.write(df.to_csv(sep=';', na_rep='null', header=True, index=False, lineterminator='\n'))
+        return reposta.json()
+
+    def gravacao(self):
+        dados = self.requisicao()
+
+        with open("dados3.csv", "a", encoding="utf-8") as f:
+            f.write(
+                self.localizacao + "\n"
+            )
