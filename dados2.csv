@@ -3502,7 +3502,7 @@ chrishirst;qBittorrent;Blackpool, Lancashire. ;2;0;0;2013-02-23;2016-09-27;1
 kikz0rsk;qBittorrent;<null>;5;6;3;2016-07-14;2025-06-16;1
 c4181;qBittorrent;Jacksonville, FL;33;2;3;2013-08-24;2025-03-17;1
 ClemPera;qBittorrent;<null>;24;7;11;2016-03-28;2025-06-13;1
-Coool;qBittorrent;🇪🇺;175;116;1255;2014-08-11;2025-05-19;1
+Coool;qBittorrent;EU;175;116;1255;2014-08-11;2025-05-19;1
 CoryG89;qBittorrent;San Francisco, CA;62;40;17;2012-04-10;2024-07-14;1
 Couchy;qBittorrent;<null>;8;5;0;2011-02-02;2025-03-23;1
 CzBiX;qBittorrent;<null>;54;191;63;2011-04-30;2025-05-16;1
@@ -4073,7 +4073,7 @@ jpnurmi;flutter;Sweden;129;482;26;2009-10-16;2025-06-01;55
 ojanvafai;flutter;<null>;16;50;0;2012-04-03;2025-05-17;55
 roozbehp;flutter;<null>;3;201;12;2010-06-10;2024-12-19;55
 franciscojma86;flutter;Mexico;17;8;0;2012-09-20;2023-08-02;52
-bartekpacia;flutter;🇪🇺;129;496;545;2018-06-18;2025-06-10;50
+bartekpacia;flutter;EU;129;496;545;2018-06-18;2025-06-10;50
 ricardoamador;flutter;<null>;18;6;3;2017-09-24;2025-03-21;50
 srujzs;flutter;<null>;21;16;0;2019-12-04;2025-06-11;50
 mraleph;flutter;Aarhus, Denmark;72;1423;1;2009-09-27;2025-05-02;50
@@ -5750,7 +5750,6 @@ clebeaupin;electron;Paris, France;32;15;1;2014-11-17;2024-08-30;2
 craigshoemaker;electron;Colorado;128;442;7;2009-09-16;2025-02-23;2
 ColinEberhardt;electron;Newcastle, UK;253;1824;4;2011-10-03;2025-04-26;2
 christian-bromann;electron;San Francisco;244;1110;35;2011-04-15;2025-04-24;2
-soh1988;electron;'s-Hertogenbosch, The Netherlands;0;0;0;2012-05-10;2025-06-16;2
 CanadaHonk;electron;UK;38;738;14;2016-05-06;2025-06-13;2
 brunoqueiros;electron;Amsterdam;38;41;44;2011-12-22;2025-06-07;2
 brhenrique;electron;São Paulo;40;6;3;2014-03-18;2025-06-11;2
@@ -11609,3 +11608,4 @@ domsmrz;pandas;<null>;14;2;0;2013-01-11;2025-02-26;4
 EkaterinaKuzkina;pandas;<null>;12;1;2;2017-10-06;2025-01-09;4
 ErdiTk;pandas;<null>;3;2;10;2016-12-17;2025-03-24;4
 eoveson;pandas;Seattle;7;0;0;2016-09-13;2025-02-03;4
+soh1988;electron;s-Hertogenbosch, The Netherlands;0;0;0;2012-05-10;2025-06-16;2

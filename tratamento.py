@@ -29,7 +29,9 @@ class Tratamento:
 
         with open("dados3.csv", "a", encoding="utf-8") as f:
             f.write(
-                dados['features'][0]['properties']['context']['country']['name'] + "\n"
+                dados['features'][0]['properties']['context']['country']['name'] + ";" +
+                dados['features'][0]['properties']['coordinates']['longitude'] + ";" +
+                dados['features'][0]['properties']['coordinates']['latitude'] + "\n"
             )
 
 for x in range(5):
@@ -37,7 +39,7 @@ for x in range(5):
         if locais[x] == filtro[y]:
             with open("dados3.csv", "a", encoding="utf-8") as f:
                 f.write(
-                    "<null>" + "\n"
+                    "<null>" + ";" + "<null>" + ";" + "<null>" + "\n"
                 )
 
             flag = False
