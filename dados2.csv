@@ -658,7 +658,7 @@ naveensrinivasan;localstack;<null>;330;175;1;2009-12-27;2025-05-16;1
 Psynbiotik;localstack;<null>;20;1;0;2013-02-17;2025-03-12;1
 nathanpeck;localstack;Queens, New York;102;1012;5;2013-02-06;2025-06-11;1
 nkuik;localstack;Copenhagen;30;37;33;2015-09-08;2025-06-16;1
-orisano;localstack; Tokyo, Japan;261;278;234;2011-09-06;2025-06-05;1
+orisano;localstack;Tokyo, Japan;261;278;234;2011-09-06;2025-06-05;1
 mohammad1ta;localstack;Berlin;39;35;11;2013-12-22;2025-06-02;1
 mforutan;localstack;Melbourne, Australia;17;2;0;2015-08-23;2025-04-28;1
 michael-barker;localstack;Cincinnati, OH;20;8;5;2014-06-13;2025-06-17;1
@@ -973,7 +973,7 @@ Owner9953;youtube-music;<null>;19;1;0;2023-07-30;2025-03-02;1
 HNPorts;youtube-music;Türkiye;10;0;3;2022-12-18;2024-09-27;1
 PabloCall;youtube-music;<null>;0;0;0;2020-02-10;2021-05-26;1
 Paciupa;youtube-music;<null>;26;4;23;2020-05-19;2025-05-06;1
-PeterDaveHello;youtube-music;Taiwan, R.O.C;682;1557;25;2013-02-25;2025-05-20;1
+PeterDaveHello;youtube-music;Taiwan;682;1557;25;2013-02-25;2025-05-20;1
 RogueScholar;youtube-music;Fort Bragg, California;96;31;239;2015-10-13;2025-03-19;1
 peterkaminski;youtube-music;Southern California, US;179;37;6;2009-12-18;2024-06-04;1
 domr38;youtube-music;<null>;0;0;9;2019-03-11;2025-04-16;1
@@ -1271,7 +1271,7 @@ Schnouki;n8n;Nancy, France;92;82;41;2009-03-19;2025-05-30;2
 sebto;n8n;Iran;3;13;47;2015-03-01;2025-05-31;2
 valentina98;n8n;Plovdiv;21;21;9;2016-01-12;2025-06-10;2
 vbarrier;n8n;Toulouse;39;23;12;2010-10-20;2025-06-15;2
-yoshino-s;n8n;Beijing. China;76;178;10;2017-05-11;2025-04-22;2
+yoshino-s;n8n;Beijing, China;76;178;10;2017-05-11;2025-04-22;2
 ajmeredith1200;n8n;York - UK ;10;1;1;2022-03-03;2025-05-30;2
 d3no;n8n;<null>;20;0;0;2016-05-02;2025-06-04;2
 lucaskenda;n8n;Buenos Aires, Argentina;4;5;1;2013-04-03;2025-03-13;2
@@ -1720,7 +1720,7 @@ cfanoulis;discord.js;Greece;45;62;48;2018-04-10;2025-06-17;2
 tiehm;discord.js;<null>;28;7;1;2016-04-05;2025-06-08;2
 hackermondev;discord.js;<null>;172;1107;33;2020-02-08;2025-06-14;2
 InkoHX;discord.js;Japan;132;128;32;2017-10-26;2025-06-14;2
-ducktrshessami;discord.js;California, U.S.;46;10;12;2013-09-19;2025-05-17;2
+ducktrshessami;discord.js;California, U.S.A.;46;10;12;2013-09-19;2025-05-17;2
 JKLorenzo;discord.js;Philippines;30;12;14;2018-06-05;2025-04-27;2
 uhKevinMC;discord.js;Texas, USA;8;2;5;2017-06-05;2025-01-01;2
 aigachu;discord.js;Canada;2;1;0;2015-08-18;2025-03-31;2
@@ -2445,7 +2445,7 @@ matchai;starship;Tokyo, Japan;152;1089;456;2013-06-10;2025-06-12;618
 dependabot[bot];starship;<null>;0;0;0;2019-04-16;2019-05-23;322
 davidkna;starship;Berlin, Germany;85;50;2;2011-06-07;2025-06-10;291
 dependabot-preview[bot];starship;<null>;0;0;0;2017-04-21;2019-05-23;283
-andytom;starship;EU;29;40;0;2009-07-26;2025-05-12;127
+andytom;starship;Europe;29;40;0;2009-07-26;2025-05-12;127
 allcontributors[bot];starship;<null>;0;0;0;2019-01-07;2019-01-07;82
 chipbuster;starship;Austin, Texas;27;32;9;2013-06-03;2025-05-27;60
 vladimyr;starship;<null>;268;155;595;2011-11-03;2025-06-14;44
@@ -2474,7 +2474,7 @@ jonstodle;starship;Norway;96;38;4;2012-05-08;2025-06-15;5
 Kissaki;starship;Germany;126;53;10;2009-06-08;2025-06-12;5
 syphar;starship;Berlin, Germany;112;121;129;2010-12-29;2025-06-16;5
 ahouts;starship;<null>;37;13;3;2016-01-26;2025-04-01;5
-yuri1969;starship;EU;87;8;2;2015-07-23;2025-05-22;4
+yuri1969;starship;Europe;87;8;2;2015-07-23;2025-05-22;4
 moko256;starship;Japan;60;21;3;2016-01-04;2024-09-13;4
 marcybelardo;starship;<null>;18;4;17;2020-11-29;2025-06-13;4
 cgzones;starship;<null>;57;52;0;2013-12-07;2025-06-10;4
@@ -2893,7 +2893,7 @@ underrun;starship;Seattle, WA;47;22;3;2011-01-26;2025-03-31;1
 DerRockWolf;starship;<null>;32;13;61;2019-05-10;2025-06-16;1
 tuxinaut;starship;Hamburg;12;24;75;2011-04-11;2025-04-22;1
 ljharb;nvm;Hillsborough, CA;283;7530;413;2009-01-10;2025-06-17;1202
-PeterDaveHello;nvm;Taiwan, R.O.C;682;1557;25;2013-02-25;2025-05-20;194
+PeterDaveHello;nvm;Taiwan;682;1557;25;2013-02-25;2025-05-20;194
 creationix;nvm;Mountainburg, AR, USA;498;5189;30;2009-05-27;2025-05-27;110
 koenpunt;nvm;Utrecht NL;181;266;128;2010-08-01;2025-06-15;67
 lukechilds;nvm;Thailand;215;1608;161;2012-08-09;2025-06-02;19
@@ -3023,7 +3023,7 @@ RodEsp;nvm;Brooklyn, NY;23;41;29;2011-09-27;2025-05-27;1
 robsonpeixoto;nvm;Salvador, Bahia, Brasil;78;152;176;2009-09-08;2025-06-13;1
 ypid;nvm;BW, Germany && Cipherspace;462;114;30;2012-01-03;2025-04-06;1
 Mahoney;nvm;UK;60;33;1;2009-12-16;2025-02-26;1
-riyadhalnur;nvm;EU;49;131;3;2013-02-02;2025-05-20;1
+riyadhalnur;nvm;Europe;49;131;3;2013-02-02;2025-05-20;1
 matthieubosquet;nvm;London, United Kingdom;44;47;15;2011-02-11;2024-12-17;1
 mimetnet;nvm;Canton, CT;18;9;12;2010-02-03;2025-06-10;1
 mceachen;nvm;California;66;154;153;2010-03-05;2025-06-16;1
@@ -3289,7 +3289,7 @@ luis-pereira;qBittorrent;<null>;15;17;0;2009-03-12;2025-05-02;9
 Noctem;qBittorrent;Chantilly, VA;56;37;15;2012-05-29;2023-08-24;8
 tehcneko;qBittorrent;<null>;20;0;0;2021-08-12;2025-06-04;8
 naikel;qBittorrent;<null>;12;14;0;2014-05-22;2025-03-18;7
-schnurlos;qBittorrent;Central Europe;4;6;0;2015-03-09;2023-11-14;7
+schnurlos;qBittorrent;Europe;4;6;0;2015-03-09;2023-11-14;7
 vlakoff;qBittorrent;Ashes of France;81;77;41;2011-01-02;2025-05-04;7
 ishanarora;qBittorrent;Auckland;11;8;12;2012-09-02;2025-06-10;7
 unitmatrix;qBittorrent;Vilnius, Lithuania;17;1;0;2015-01-09;2025-01-20;7
@@ -3382,7 +3382,7 @@ ntfreak;qBittorrent;UK;15;46;11;2010-05-04;2025-06-13;2
 Shraymonks;qBittorrent;<null>;93;47;18;2010-08-21;2025-06-17;2
 rwasef1830;qBittorrent;Cairo, Egypt;71;12;1;2013-06-06;2025-06-10;2
 eszlari;qBittorrent;<null>;121;8;0;2015-11-01;2024-10-10;2
-PeterDaveHello;qBittorrent;Taiwan, R.O.C;682;1557;25;2013-02-25;2025-05-20;2
+PeterDaveHello;qBittorrent;Taiwan;682;1557;25;2013-02-25;2025-05-20;2
 pktiuk;qBittorrent;Warsaw, Poland;66;32;12;2018-12-02;2025-06-08;2
 ppolewicz;qBittorrent;Poland / Warsaw;31;62;1;2011-04-13;2025-06-04;2
 maxrd2;qBittorrent;<null>;23;13;0;2011-11-10;2025-06-17;2
@@ -3502,7 +3502,7 @@ chrishirst;qBittorrent;Blackpool, Lancashire. ;2;0;0;2013-02-23;2016-09-27;1
 kikz0rsk;qBittorrent;<null>;5;6;3;2016-07-14;2025-06-16;1
 c4181;qBittorrent;Jacksonville, FL;33;2;3;2013-08-24;2025-03-17;1
 ClemPera;qBittorrent;<null>;24;7;11;2016-03-28;2025-06-13;1
-Coool;qBittorrent;EU;175;116;1255;2014-08-11;2025-05-19;1
+Coool;qBittorrent;Europe;175;116;1255;2014-08-11;2025-05-19;1
 CoryG89;qBittorrent;San Francisco, CA;62;40;17;2012-04-10;2024-07-14;1
 Couchy;qBittorrent;<null>;8;5;0;2011-02-02;2025-03-23;1
 CzBiX;qBittorrent;<null>;54;191;63;2011-04-30;2025-05-16;1
@@ -3854,7 +3854,7 @@ orouz;TypeScript;Tel Aviv;26;13;177;2016-08-03;2025-06-17;2
 nicolo-ribaudo;TypeScript;Turin, Italy;233;1245;9;2014-03-19;2025-06-11;2
 nicolas377;TypeScript;South Carolina;20;11;6;2020-07-16;2025-06-11;2
 mylesmegyesi;TypeScript;London, UK;54;39;0;2010-02-22;2025-05-15;2
-mohsen1;TypeScript;Europe and East Coast USA;276;495;68;2011-01-01;2025-06-16;2
+mohsen1;TypeScript;Europe;276;495;68;2011-01-01;2025-06-16;2
 mmitche;TypeScript;Redmond, WA;207;169;2;2014-09-10;2025-06-03;2
 mkantor;TypeScript;<null>;87;34;7;2008-11-18;2025-02-27;2
 abrahamguo;TypeScript;Normal, IL;22;7;0;2014-06-09;2025-04-22;2
@@ -3905,7 +3905,7 @@ webpro;TypeScript;De Bilt, Netherlands;105;903;0;2010-10-27;2025-06-15;2
 KSXGitHub;TypeScript;<null>;377;108;0;2015-03-15;2025-05-22;2
 stkevintan;TypeScript;<null>;119;205;50;2013-11-08;2025-06-16;2
 Ken703;TypeScript;<null>;3;0;0;2018-01-16;2020-10-10;2
-katemihalikova;TypeScript;Jablonec nad Nisou, Czechia, EU;60;77;5;2014-04-08;2025-05-29;2
+katemihalikova;TypeScript;Jablonec nad Nisou, Czechia;60;77;5;2014-04-08;2025-05-29;2
 jwunderl;TypeScript;Redmond;111;57;2;2013-10-05;2025-06-16;2
 sophiajt;TypeScript;New Zealand;125;1544;0;2011-01-04;2025-05-27;2
 jrieken;TypeScript;Switzerland;72;1055;1;2012-05-30;2025-01-06;2
@@ -4073,7 +4073,7 @@ jpnurmi;flutter;Sweden;129;482;26;2009-10-16;2025-06-01;55
 ojanvafai;flutter;<null>;16;50;0;2012-04-03;2025-05-17;55
 roozbehp;flutter;<null>;3;201;12;2010-06-10;2024-12-19;55
 franciscojma86;flutter;Mexico;17;8;0;2012-09-20;2023-08-02;52
-bartekpacia;flutter;EU;129;496;545;2018-06-18;2025-06-10;50
+bartekpacia;flutter;Europe;129;496;545;2018-06-18;2025-06-10;50
 ricardoamador;flutter;<null>;18;6;3;2017-09-24;2025-03-21;50
 srujzs;flutter;<null>;21;16;0;2019-12-04;2025-06-11;50
 mraleph;flutter;Aarhus, Denmark;72;1423;1;2009-09-27;2025-05-02;50
@@ -4174,7 +4174,7 @@ naudzghebre;flutter;<null>;5;1;1;2017-07-28;2025-06-10;15
 jnschulze;flutter;Frankfurt, DE;61;68;19;2011-04-10;2025-05-17;15
 YeungKC;flutter;<null>;51;133;63;2015-03-14;2025-06-02;15
 alanwutang11;flutter;<null>;6;1;3;2019-05-03;2024-10-25;15
-wanglikun7342;flutter; Hangzhou, China;5;39;6;2014-12-17;2024-12-23;15
+wanglikun7342;flutter;Hangzhou, China;5;39;6;2014-12-17;2024-12-23;15
 ianloic;flutter;Alameda, California;132;139;42;2008-02-22;2025-06-06;15
 helin24;flutter;<null>;33;63;0;2014-01-11;2025-06-10;15
 nathanrogersgoogle;flutter;<null>;2;1;0;2016-12-14;2021-04-23;15
@@ -4989,7 +4989,7 @@ Andarist;babel;Wrocław, Poland;585;2080;5;2014-11-17;2025-06-15;62
 greenkeeper[bot];babel;<null>;0;0;0;2016-10-24;2016-11-25;54
 jmm;babel;<null>;134;145;26;2009-09-20;2025-03-07;52
 zxbodya;babel;Amsterdam, Netherlands;55;93;19;2010-10-19;2025-05-29;48
-yavorsky;babel;EU;107;230;51;2012-03-09;2025-05-28;38
+yavorsky;babel;Europe;107;230;51;2012-03-09;2025-05-28;38
 kaicataldo;babel;Brooklyn, NY;78;243;0;2014-03-23;2025-06-10;38
 eventualbuddha;babel;San Francisco;97;323;11;2008-03-02;2025-06-14;38
 motiz88;babel;London, UK;223;160;22;2012-08-30;2025-06-11;37
@@ -5451,7 +5451,7 @@ gabriel;electron;Santa Cruz, CA;98;442;40;2008-03-10;2025-06-11;20
 groundwater;electron;<null>;217;767;122;2010-12-28;2025-06-11;20
 adill;electron;<null>;3;143;0;2009-10-26;2025-05-13;18
 mnquintana;electron;<null>;38;152;214;2011-06-01;2024-11-29;18
-thomastuts;electron; Belgium;52;43;4;2012-07-02;2025-06-11;18
+thomastuts;electron;Belgium;52;43;4;2012-07-02;2025-06-11;18
 qazbnm456;electron;Taiwan;134;1006;20;2014-01-20;2025-06-02;18
 enlight;electron;Thailand;69;102;2;2010-03-30;2025-05-24;17
 shubham2892;electron;Seattle;12;15;3;2014-01-04;2025-06-01;17
@@ -5720,7 +5720,7 @@ bkeepers;electron;Sailing;205;2070;68;2008-02-09;2025-05-26;2
 BrandonXLF;electron;Ontario, Canada;49;51;3;2018-08-21;2025-06-11;2
 carterbs;electron;Charlottesville, VA;18;2;0;2015-12-28;2025-06-14;2
 austinmoore-;electron;Washington, D.C.;13;4;0;2011-12-16;2025-06-11;2
-astoilkov;electron;EU › Bulgaria › Sofia;53;439;90;2011-06-29;2025-06-14;2
+astoilkov;electron;Bulgaria › Sofia;53;439;90;2011-06-29;2025-06-14;2
 darwin;electron;<null>;143;744;1318;2008-04-06;2024-10-16;2
 primalmotion;electron;<null>;48;135;24;2010-02-22;2025-05-20;2
 xxczaki;electron;Warsaw, Poland;223;350;184;2016-10-05;2025-06-05;2
@@ -5767,7 +5767,7 @@ blueyed;neovim;Berlin, Germany;595;524;99;2008-05-09;2025-06-11;547
 gpanders;neovim;<null>;133;268;0;2014-09-29;2025-03-08;512
 luukvbaal;neovim;<null>;16;49;0;2017-09-07;2025-02-08;413
 seandewar;neovim;United Kingdom;45;128;29;2013-12-24;2025-05-09;403
-mhinz;neovim;Europe, Potsdam;38;700;0;2011-08-10;2025-04-12;330
+mhinz;neovim;Potsdam, Germany;38;700;0;2011-08-10;2025-04-12;330
 elmart;neovim;Madrid;11;29;8;2009-10-06;2024-04-16;265
 erw7;neovim;Japan;45;11;0;2015-03-27;2022-11-22;262
 mjlbach;neovim;<null>;89;308;13;2015-07-13;2025-06-14;241
@@ -6004,7 +6004,7 @@ beardedsakimonkey;neovim;<null>;19;1;15;2019-08-26;2024-02-01;4
 chemzqm;neovim;Beijing, China;190;1126;13;2010-04-24;2025-05-31;4
 hrsh7th;neovim;Fukuoka, Japan;216;1531;37;2011-02-21;2025-02-04;4
 jbyuki;neovim;<null>;48;126;156;2019-02-04;2025-06-07;4
-cyphar;neovim;Oceania (circa 1984);139;847;2;2012-11-26;2025-05-22;4
+cyphar;neovim;Australia;139;847;2;2012-11-26;2025-05-22;4
 ateoi;neovim;<null>;6;26;1;2014-08-07;2025-06-01;4
 afh;neovim;<null>;84;93;14;2008-07-09;2025-05-31;4
 lambdalisue;neovim;Tokyo, Japan;508;797;330;2011-01-04;2025-06-05;4
@@ -6401,7 +6401,7 @@ evnm;bootstrap;San Rafael, CA;48;129;24;2009-07-29;2024-11-15;3
 loic;bootstrap;<null>;26;122;2;2008-11-23;2025-05-16;2
 mikelehen;bootstrap;<null>;50;171;19;2010-02-18;2025-06-11;2
 mikaelkael;bootstrap;Donges, France;20;36;13;2010-02-28;2025-04-28;2
-mxkxf;bootstrap;eu-west-2;28;94;107;2012-04-23;2025-05-17;2
+mxkxf;bootstrap;Europe;28;94;107;2012-04-23;2025-05-17;2
 MikeRogers0;bootstrap;London, UK;43;281;99;2010-07-07;2022-12-05;2
 abitdodgy;bootstrap;São Paulo, Brazil;56;56;16;2011-01-03;2025-05-16;2
 kadimi;bootstrap;Errachidia - Morocco;69;34;5;2010-03-18;2025-01-31;2
@@ -9065,7 +9065,7 @@ adohe;kubernetes;<null>;6;13;4;2020-09-22;2024-12-28;58
 MadhavJivrajani;kubernetes;Champaign, IL;114;249;53;2015-05-10;2025-05-23;58
 tnqn;kubernetes;<null>;35;52;12;2013-08-28;2025-06-09;58
 kevindelgado;kubernetes;San Francisco;36;14;5;2014-04-08;2025-01-08;57
-xichengliudui;kubernetes;BeiJing.China;160;41;37;2018-07-06;2025-02-08;56
+xichengliudui;kubernetes;BeiJing, China;160;41;37;2018-07-06;2025-02-08;56
 mfojtik;kubernetes;Brno, Czech republic;313;183;3;2009-01-04;2025-05-19;56
 mm4tt;kubernetes;Kozy;34;31;4;2012-10-20;2025-01-18;56
 lojies;kubernetes;<null>;4;8;1;2014-12-16;2025-05-19;55
@@ -9208,7 +9208,7 @@ freakboy3742;django;Perth, Western Australia;68;1858;1;2008-11-30;2025-06-09;174
 claudep;django;Switzerland;67;493;2;2009-10-22;2025-05-20;1720
 felixxm;django;Toruń, Poland;89;1064;5;2012-11-22;2025-02-20;1622
 aaugustin;django;Paris, France;20;1298;0;2011-05-15;2025-04-03;1399
-jezdez;django; Germany;126;0;0;2008-02-28;2025-06-11;895
+jezdez;django;Germany;126;0;0;2008-02-28;2025-06-11;895
 jacobian;django;Oregon;64;2946;25;2008-08-19;2025-05-08;893
 charettes;django;Montréal, Québec;81;546;126;2008-05-04;2025-03-15;732
 spookylukey;django;<null>;157;761;3;2009-03-12;2025-06-17;497
@@ -9854,7 +9854,7 @@ ihaque;scikit-learn;<null>;25;52;5;2011-11-29;2025-05-29;7
 sadakmed;scikit-learn;Italy;34;18;10;2016-04-07;2025-05-19;6
 waterponey;scikit-learn;Toulouse;41;17;3;2013-10-28;2025-02-03;6
 lopusz;scikit-learn;<null>;40;35;0;2009-03-15;2025-05-21;6
-virchan;scikit-learn; San Francisco Bay Area;8;6;15;2017-02-11;2025-05-16;6
+virchan;scikit-learn;San Francisco Bay Area;8;6;15;2017-02-11;2025-05-16;6
 janvanrijn;scikit-learn;Leiden, Netherlands;45;59;2;2012-09-06;2025-05-17;6
 iasoon;scikit-learn;London;39;28;39;2014-01-04;2024-11-29;6
 Ankit810;scikit-learn;<null>;19;0;0;2019-08-13;2025-02-03;6
@@ -10826,7 +10826,7 @@ jimi-c;ansible;<null>;23;219;1;2008-09-26;2025-04-25;2822
 abadger;ansible;Granite Bay, CA;105;351;0;2010-02-23;2025-06-16;2707
 mattclay;ansible;Portland, Oregon, USA;56;101;0;2011-05-23;2025-06-14;2593
 sivel;ansible;San Antonio, TX;137;725;1;2008-12-09;2025-06-05;1188
-dagwieers;ansible;Flanders, Europe, Earth;145;558;9;2010-09-05;2024-11-10;1093
+dagwieers;ansible;Belgium, Flanders;145;558;9;2010-09-05;2024-11-10;1093
 Akasurde;ansible;Vancouver, BC, Canada;268;310;55;2011-02-23;2025-03-04;1086
 jctanner;ansible;Raleigh, NC;111;145;3;2012-06-19;2025-06-04;874
 resmo;ansible;Switzerland;100;323;121;2008-09-09;2025-01-07;766
@@ -10995,7 +10995,7 @@ mvo5;ansible;Trier/Luxembourg area;223;142;2;2011-07-14;2025-06-09;20
 aioue;ansible;<null>;33;20;41;2011-12-11;2025-06-03;20
 dkasberg;ansible;Auburn, CA;2;0;0;2014-09-15;2023-08-28;19
 anasbadaha;ansible;Rawabi;5;0;1;2018-09-13;2025-06-16;19
-it-praktyk;ansible;Bydgoszcz, Poland, Europe, Earth;51;35;18;2013-07-01;2025-05-26;19
+it-praktyk;ansible;Bydgoszcz, Poland;51;35;18;2013-07-01;2025-05-26;19
 stefanhorning;ansible;Berlin, Germany;23;19;28;2011-10-25;2025-05-21;19
 julienvey;ansible;France;63;50;24;2010-10-27;2025-02-20;19
 GomathiselviS;ansible;Raleigh;87;16;3;2019-06-03;2025-06-10;19
@@ -11176,7 +11176,7 @@ dagnello;ansible;Seattle;23;1;3;2014-10-22;2025-04-24;8
 getJack;ansible;<null>;2;0;0;2021-11-20;2021-11-20;8
 lwm;ansible;<null>;0;0;0;2019-02-25;2022-06-22;8
 alvaroaleman;ansible;Canada;184;175;0;2014-01-24;2025-05-30;8
-acalm;ansible;Stockholm, EU;11;3;1;2016-02-29;2025-05-11;8
+acalm;ansible;Stockholm, Sweden;11;3;1;2016-02-29;2025-05-11;8
 briantist;ansible;<null>;74;63;88;2011-12-13;2025-04-25;8
 dminca;ansible;Germany;174;37;43;2013-08-31;2025-06-06;8
 dne;ansible;Stockholm, Sweden;43;12;7;2009-11-26;2025-05-27;8

@@ -36,10 +36,10 @@ class Tratamento:
 
 for x in range(5):
     for y in range(len(filtro)):
-        if locais[x] == filtro[y]:
+        if locais[x] == "filtro[y]":
             with open("dados3.csv", "a", encoding="utf-8") as f:
                 f.write(
-                    "<null>" + ";" + "<null>" + ";" + "<null>" + "\n"
+                    "<null>" + ";" + "0" + ";" + "0" + "\n"
                 )
 
             flag = False
