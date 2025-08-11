@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae94b3852fbc6e54f77cabca4df88ae7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae94b3852fbc6e54f77cabca4df88ae7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae94b3852fbc6e54f77cabca4df88ae7 = L.map(
+                "map_ae94b3852fbc6e54f77cabca4df88ae7",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+  "worldCopyJump": true,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eb97663dbd29af7c1d8ad77762b15c05 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eb97663dbd29af7c1d8ad77762b15c05.addTo(map_ae94b3852fbc6e54f77cabca4df88ae7);
+        
+    
+            var circle_marker_320dd3361e490d13a97a6f0d3b4fe474 = L.circleMarker(
+                [45.3288, -121.6625],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": false, "weight": 3}
+            ).addTo(map_ae94b3852fbc6e54f77cabca4df88ae7);
+        
+    
+        var popup_a967d2a89a1ebdfe66bd50d781b1b101 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3da6b1064dffc6b97b7dbcf2ced625b2 = $(`<div id="html_3da6b1064dffc6b97b7dbcf2ced625b2" style="width: 100.0%; height: 100.0%;">10 pixels</div>`)[0];
+                popup_a967d2a89a1ebdfe66bd50d781b1b101.setContent(html_3da6b1064dffc6b97b7dbcf2ced625b2);
+            
+        
+
+        circle_marker_320dd3361e490d13a97a6f0d3b4fe474.bindPopup(popup_a967d2a89a1ebdfe66bd50d781b1b101)
+        ;
+
+        
+    
+    
+            circle_marker_320dd3361e490d13a97a6f0d3b4fe474.bindTooltip(
+                `<div>
+                     I am in pixels
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3f48d7a4312bce3186430e221bed0e3 = L.circleMarker(
+                [45.3288, -121.6625],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": false, "weight": 3}
+            ).addTo(map_ae94b3852fbc6e54f77cabca4df88ae7);
+        
+    
+        var popup_ddd20950f11eb9fa09dcd8040ccada20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcf0f10ddb14e10809d00b3313c8054d = $(`<div id="html_bcf0f10ddb14e10809d00b3313c8054d" style="width: 100.0%; height: 100.0%;">10 pixels</div>`)[0];
+                popup_ddd20950f11eb9fa09dcd8040ccada20.setContent(html_bcf0f10ddb14e10809d00b3313c8054d);
+            
+        
+
+        circle_marker_f3f48d7a4312bce3186430e221bed0e3.bindPopup(popup_ddd20950f11eb9fa09dcd8040ccada20)
+        ;
+
+        
+    
+    
+            circle_marker_f3f48d7a4312bce3186430e221bed0e3.bindTooltip(
+                `<div>
+                     I am in pixels
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adb2f5e65942af1d8dd0161d6b226fa6 = L.circleMarker(
+                [45.3288, -121.6625],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": false, "weight": 3}
+            ).addTo(map_ae94b3852fbc6e54f77cabca4df88ae7);
+        
+    
+        var popup_735abf359c0d59ae04bfd844b3678a52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a9a13bb2868c65ab16a4448744c3978 = $(`<div id="html_1a9a13bb2868c65ab16a4448744c3978" style="width: 100.0%; height: 100.0%;">10 pixels</div>`)[0];
+                popup_735abf359c0d59ae04bfd844b3678a52.setContent(html_1a9a13bb2868c65ab16a4448744c3978);
+            
+        
+
+        circle_marker_adb2f5e65942af1d8dd0161d6b226fa6.bindPopup(popup_735abf359c0d59ae04bfd844b3678a52)
+        ;
+
+        
+    
+    
+            circle_marker_adb2f5e65942af1d8dd0161d6b226fa6.bindTooltip(
+                `<div>
+                     I am in pixels
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a984f8ae8bdbfe6418828c4652e5aded = L.circleMarker(
+                [43.3288, -124.6625],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": false, "weight": 3}
+            ).addTo(map_ae94b3852fbc6e54f77cabca4df88ae7);
+        
+    
+        var popup_391bc87a31ba417ac80fecdf0119baac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e7c05c11b12446041d03b1571d1c970 = $(`<div id="html_3e7c05c11b12446041d03b1571d1c970" style="width: 100.0%; height: 100.0%;">10 pixels</div>`)[0];
+                popup_391bc87a31ba417ac80fecdf0119baac.setContent(html_3e7c05c11b12446041d03b1571d1c970);
+            
+        
+
+        circle_marker_a984f8ae8bdbfe6418828c4652e5aded.bindPopup(popup_391bc87a31ba417ac80fecdf0119baac)
+        ;
+
+        
+    
+    
+            circle_marker_a984f8ae8bdbfe6418828c4652e5aded.bindTooltip(
+                `<div>
+                     I am in pixels
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
