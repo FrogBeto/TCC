@@ -1,6 +1,14 @@
+import pandas as pd
 import folium
 
-raio = 10
+df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
+longi = []
+lati = []
+
+for x in df['Longitude']:
+    longi.append(x)
+for x in df['Latitude']:
+    lati.append(x)
 
 m = folium.Map(
     [0,0],
@@ -17,9 +25,15 @@ class Mapa:
     def adicionar(self):
         folium.CircleMarker(
             location=[self.Latitude, self.Longitude],
-            radius=raio,
+            radius=20,
             color='red',
             stroke=False,
             fill=True,
-            fill_opacity=0.1,
+            fill_opacity=0.01,
         ).add_to(m)
+
+for x in range(len(longi)):
+    ponto = Mapa(df['Longitude'][x], df['Latitude'][x])#longi[x], lati[x])
+    ponto.adicionar()
+
+m.save('Mapas/mapa.html')
