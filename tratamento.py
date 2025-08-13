@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 
 #Leitura do CSV com todos os dados coletados e com tratamento prévio
-df = pd.read_csv('Tratamento Inicial\dados2.csv', sep=';')
+df = pd.read_csv('Tratamento Inicial/dados2.csv', sep=';')
 locais = []             #Vetor que vai armazenar os locais
 
 #Criação da lista de localizações dos usuarios
@@ -26,7 +26,7 @@ class Tratamento:
     def gravacao(self):
         dados = self.requisicao()
 
-        with open("Tratamento Inicial\dados3.csv", "a", encoding="utf-8") as f:
+        with open("Tratamento Inicial/dados3.csv", "a", encoding="utf-8") as f:
             f.write(
                 dados['features'][0]['properties']['context']['country']['name'] + ";" +
                 str(dados['features'][0]['properties']['coordinates']['longitude']) + ";" +
@@ -36,7 +36,7 @@ class Tratamento:
 #Percorre o vetor, caso seja uma localização nula, grava que é nulo e aponta para 0 0,
 for x in range(len(locais)):
     if locais[x] == "<null>":
-        with open("Tratamento Inicial\dados3.csv", "a", encoding="utf-8") as f:
+        with open("Tratamento Inicial/dados3.csv", "a", encoding="utf-8") as f:
             f.write(
                 "<null>" + ";" + "0" + ";" + "0" + "\n"
             )

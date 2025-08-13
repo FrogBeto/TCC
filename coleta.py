@@ -8,7 +8,7 @@ headers = {
 }
 
 #Leitura do csv com os projetos e criação dos vetores para armazenar os donos dos repositórios e os seus projetos
-df = pd.read_csv('usuarios.csv')
+df = pd.read_csv('Dados Brutos/usuarios.csv')
 usuarios = []
 projetos = []
 contribuicoes = []
@@ -46,7 +46,7 @@ class Busca:
         dados = self.requisicao()
 
         if type(dados) is not int:
-            with open("dados.csv", "a", encoding="utf-8") as f:
+            with open("Dados Brutos/dados.csv", "a", encoding="utf-8") as f:
                 if dados['location']:
                     f.write(
                         self.usuario + ";" + self.projeto + ";" + dados['location'] + ";" + str(dados['public_repos']) + ";" + str(dados['followers']) + ";" +

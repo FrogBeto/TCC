@@ -2,13 +2,8 @@ import pandas as pd
 import folium
 
 df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
-longi = []
-lati = []
 
-for x in df['Longitude']:
-    longi.append(x)
-for x in df['Latitude']:
-    lati.append(x)
+pontos = df.groupby(['Longitude', 'Latitude']).size().reset_index(name='Quantidade').sort_values('Quantidade', ascending=False).reset_index(drop=True)
 
 m = folium.Map(
     [0,0],
@@ -18,22 +13,28 @@ m = folium.Map(
 )
 
 class Mapa:
-    def __init__(self, longitude, latitude):
+    def __init__(self, longitude, latitude, quantidade):
         self.Longitude = longitude
         self.Latitude = latitude
+        self.Quantidade = quantidade
 
     def adicionar(self):
         folium.CircleMarker(
             location=[self.Latitude, self.Longitude],
-            radius=20,
+            radius=(10 + int(self.Quantidade / 5)),
             color='red',
             stroke=False,
             fill=True,
-            fill_opacity=0.01,
+            fill_opacity=(0.31 + (0.01 * self.Quantidade)),
         ).add_to(m)
 
-for x in range(len(longi)):
-    ponto = Mapa(df['Longitude'][x], df['Latitude'][x])#longi[x], lati[x])
-    ponto.adicionar()
+for x in range(len(pontos)):
+    aux = 0
+    for y in pontos.groupby('Quantidade').mean().reset_index().sort_values('Quantidade', ascending=True).reset_index(drop=True)['Quantidade']:
+        if pontos['Quantidade'][x] == y:
+            ponto = Mapa(pontos['Longitude'][x], pontos['Latitude'][x], aux)
+            ponto.adicionar()
+        else:
+            aux = aux + 1
 
 m.save('Mapas/mapa.html')
