@@ -7,7 +7,7 @@ pontosCalor = df.groupby(['Longitude', 'Latitude']).size().reset_index(name='Qua
 pontosProjetos = df.groupby(['Projeto', 'Longitude', 'Latitude']).size().reset_index(name='Quantidade').sort_values('Projeto', ascending=False).reset_index(drop=True)
 quantProjetos = pontosProjetos.groupby(['Projeto', 'Quantidade']).mean().reset_index()
 listaCor = [
-    'red', '#D60270', '#9B4F96', '#0038A8', '#D52D00',
+    '#E40303', '#D60270', '#9B4F96', '#0038A8', '#D52D00',
     '#EF7627', '#FF9A56', '#D162A4', '#B55690', '#A30262',
     '#5BCEFA', '#F5A9B8', '#000000', '#A3A3A3', '#800080',
     '#FF218C', '#FFD800', '#21B1FF', '#078D70', '#26CEAA',
@@ -44,7 +44,7 @@ class Mapa:
         folium.CircleMarker(
             location=[self.Latitude, self.Longitude],
             radius=(10 + int(self.Quantidade / 5)),
-            color='red',
+            color=self.Cor,
             stroke=False,
             fill=True,
             fill_opacity=(0.31 + (0.01 * self.Quantidade)),
@@ -85,4 +85,4 @@ for x in range(len(pontosProjetos)):
             aux = aux + 1
 
 folium.LayerControl(sortLayers=True, hideSingleBase=True).add_to(m)
-m.save('Mapas/mapa.html')
+m.save('Mapas/Mapa de Calor.html')
