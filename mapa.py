@@ -1,5 +1,6 @@
 import pandas as pd
 import folium
+from fontTools.misc.textTools import tostr
 
 df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
 
@@ -25,7 +26,7 @@ m = folium.Map(
 )
 
 #Codigo respondavel por fazer radio button
-# (necessario mudar o overlay
+# (necessario mudar o overlay)
 #folium.raster_layers.TileLayer(
 #    tiles="CartoDB Positron",
 #    overlay=False,
@@ -34,11 +35,12 @@ m = folium.Map(
 #).add_to(m)
 
 class Mapa:
-    def __init__(self, longitude, latitude, quantidade, cor):
+    def __init__(self, longitude, latitude, quantidade, cor, valor):
         self.Longitude = longitude
         self.Latitude = latitude
         self.Quantidade = quantidade
         self.Cor = cor
+        self.Valor = valor
 
     def adicionar_calor(self):
         folium.CircleMarker(
@@ -48,6 +50,7 @@ class Mapa:
             stroke=False,
             fill=True,
             fill_opacity=(0.31 + (0.01 * self.Quantidade)),
+            tooltip='Número de usúarios: ' + str(self.Valor)
         ).add_to(fg)
 
     def adicionar_ponto(self):
@@ -58,6 +61,7 @@ class Mapa:
             stroke=False,
             fill=True,
             fill_opacity=(0.30 + (0.07 * self.Quantidade)),
+            tooltip='Número de usúarios: ' + str(self.Valor)
         ).add_to(fg)
 
 fg = folium.FeatureGroup(name='Mapa de Calor', show=True, overlay=True).add_to(m)
@@ -65,7 +69,7 @@ for x in range(len(pontosCalor)):
     aux = 0
     for y in pontosCalor.groupby('Quantidade').mean().reset_index().sort_values('Quantidade', ascending=True).reset_index(drop=True)['Quantidade']:
         if pontosCalor['Quantidade'][x] == y:
-            ponto = Mapa(pontosCalor['Longitude'][x], pontosCalor['Latitude'][x], aux, listaCor[0])
+            ponto = Mapa(pontosCalor['Longitude'][x], pontosCalor['Latitude'][x], aux, listaCor[0], y)
             ponto.adicionar_calor()
         else:
             aux = aux + 1
@@ -79,7 +83,7 @@ for x in range(len(pontosProjetos)):
 
     for y in range(len(quantProjetos)):
         if pontosProjetos['Quantidade'][x] == quantProjetos['Quantidade'][y] and pontosProjetos['Projeto'][x] == quantProjetos['Projeto'][y]:
-            ponto = Mapa(pontosProjetos['Longitude'][x], pontosProjetos['Latitude'][x], aux, listaCor[ref])
+            ponto = Mapa(pontosProjetos['Longitude'][x], pontosProjetos['Latitude'][x], aux, listaCor[ref], quantProjetos['Quantidade'][y])
             ponto.adicionar_ponto()
         elif pontosProjetos['Projeto'][x] == quantProjetos['Projeto'][y]:
             aux = aux + 1

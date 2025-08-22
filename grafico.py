@@ -4,12 +4,15 @@ import numpy as np
 
 df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
 
-lista = []
+df['Atualizado_em'] = pd.to_datetime(df['Atualizado_em'], format="%Y-%m-%d")
 
-for x in range(len(df)):
-    lista.append(pd.Timestamp(df['Atualizado_em'][x]).year)
+df['Ano'] = df['Atualizado_em'].dt.year
+df['Mes'] = df['Atualizado_em'].dt.month
+df['Dia'] = df['Atualizado_em'].dt.day
 
-print(lista)
+for x in range(5):
+    print(df['Atualizado_em'][x], df['Ano'][x], df['Mes'][x], df['Dia'][x])
+
 #paises = df.groupby(['País']).sum().reset_index().sort_values('Contribuições', ascending=False).reset_index(drop=True)
 
 #for x in range(len(paises)):
