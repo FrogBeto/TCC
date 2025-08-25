@@ -2,16 +2,18 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
+#df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
 
-df['Atualizado_em'] = pd.to_datetime(df['Atualizado_em'], format="%Y-%m-%d")
+#df['Atualizado_em'] = pd.to_datetime(df['Atualizado_em'], format="%Y-%m-%d").dt.date
 
-df['Ano'] = df['Atualizado_em'].dt.year
-df['Mes'] = df['Atualizado_em'].dt.month
-df['Dia'] = df['Atualizado_em'].dt.day
+#df['Ano'] = pd.to_datetime(df['Atualizado_em']).dt.year
+#df['Mes'] = pd.to_datetime(df['Atualizado_em']).dt.month
+#df['Dia'] = pd.to_datetime(df['Atualizado_em']).dt.day
 
-for x in range(5):
-    print(df['Atualizado_em'][x], df['Ano'][x], df['Mes'][x], df['Dia'][x])
+#for x in range(5):
+#    print(df['Atualizado_em'][x], df['Ano'][x], df['Mes'][x], df['Dia'][x])
+
+#df.to_csv('CSVs/Dados Finais/dadosFinais.csv', sep=';', index=False)
 
 #paises = df.groupby(['País']).sum().reset_index().sort_values('Contribuições', ascending=False).reset_index(drop=True)
 
@@ -47,3 +49,9 @@ for x in range(5):
 #plt.show()
 #temp = []
 #temp2 = []
+
+df = pd.read_csv('CSVs/Dados Finais/dadosFinais.csv', sep=';')
+
+abandonos = df.groupby(['Ano']).sum().reset_index().sort_values(['Projeto', 'Contribuições'], ascending=False).reset_index(drop=True)
+
+print(abandonos)
