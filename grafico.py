@@ -133,71 +133,66 @@ import numpy as np
 ##########################################################################
 
 ################################Gráfico das Criações#########################
-df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
+#df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
 
-criacao = df.groupby(['Criado_em_Ano']).size().reset_index(name='Quantidade').sort_values('Criado_em_Ano', ascending=False).reset_index(drop=True)
+#criacao = df.groupby(['Criado_em_Ano']).size().reset_index(name='Quantidade').sort_values('Criado_em_Ano', ascending=False).reset_index(drop=True)
 
-print(criacao)
+#print(criacao)
 
-#temp = []
-#temp2 = []
-#outros = 0
-
-#for x in range(len(criacao)):
-#    if x < 3:
-#       outros = outros + criacao['Quantidade'][x]
-#    else:
-#        temp.append(criacao['Quantidade'][x])
-#        temp2.append(criacao['Criado_em_Ano'][x])
-
-#temp.append(outros)
-#temp2.append('Outros anos')
-
-plt.bar(criacao['Criado_em_Ano'],criacao['Quantidade'])
-plt.show()
+#plt.bar(criacao['Criado_em_Ano'],criacao['Quantidade'])
+#plt.show()
 ##########################################################################################
 
 ################################Criações por Projeto#####################################
-#paises = df.groupby(['Projeto', 'Ano']).size().reset_index(name='Quantidade').sort_values(['Projeto', 'Ano'], ascending=False).reset_index(drop=True)
+#criacao = df.groupby(['Projeto', 'Criado_em_Ano']).size().reset_index(name='Quantidade').sort_values('Projeto', ascending=False).reset_index(drop=True)
 
 #temp = []
 #temp2 = []
-#outros = 0
 
-#for x in range(len(paises)):
-    #print(paises['Projeto'][x], paises['Ano'][x], paises['Quantidade'][x])
+#for x in range(len(criacao)):
+#    print(criacao['Projeto'][x], criacao['Criado_em_Ano'][x], criacao['Quantidade'][x])
 
-#    if x != 0 and paises['Projeto'][x] != paises['Projeto'][x-1]:
-#        temp.append('Outros Anos')
-#        temp2.append(outros)
-#        plt.pie(
-#            temp2,
-#            labels=temp,
-#            autopct='%1.1f%%',
-#            explode=(0.2, 0.2, 0.2)
-#        )
-#        plt.title(paises['Projeto'][x-1])
+#    if x != 0 and criacao['Projeto'][x] != criacao['Projeto'][x-1]:
+#        plt.bar(temp, temp2)
+#        plt.title(criacao['Projeto'][x-1])
 #        plt.show()
 #        temp = []
 #        temp2 = []
-#        outros = 0
 
-#    if paises['Ano'][x] == 2025 or paises['Ano'][x] == 2024:
-#        temp.append(paises['Ano'][x])
-#        temp2.append(paises['Quantidade'][x])
-#    else:
-#        outros = outros + paises['Quantidade'][x]
+#    temp.append(criacao['Criado_em_Ano'][x])
+#    temp2.append(criacao['Quantidade'][x])
 
-
-#temp.append('Outros Anos')
-#temp2.append(outros)
-#plt.title(paises['Projeto'][len(paises)-1])
-#plt.pie(
-#    temp2,
-#    labels=temp,
-#    autopct='%1.1f%%',
-#    explode=(0.2, 0.2, 0.2)
-#)
+#plt.title(criacao['Projeto'][len(criacao)-1])
+#plt.bar(temp, temp2)
 #plt.show()
-
 ##########################################################################
+
+#############################Contribuição po Ano de criação#########################
+df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
+
+criacao = df.groupby(['Criado_em_Ano', 'Contribuições']).size().reset_index(name='Quantidade').groupby(['Criado_em_Ano']).sum().reset_index().sort_values(by=['Criado_em_Ano'], ascending=False).reset_index(drop=True)
+
+print(criacao)
+
+outros = 0
+temp = []
+temp2 = []
+
+for x in range(len(criacao)):
+    if x < 7:
+        outros = outros + criacao['Contribuições'][x]
+    else:
+        temp.append(criacao['Criado_em_Ano'][x])
+        temp2.append(criacao['Contribuições'][x])
+
+
+temp.append('Outros Anos')
+temp2.append(outros)
+
+plt.pie(
+    temp2,
+    labels=temp,
+    autopct='%1.1f%%',
+#    explode=(0.2, 0.2, 0.2),
+)
+plt.show()
