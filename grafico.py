@@ -211,7 +211,7 @@ criacao = df.groupby(['Criado_em_Ano', 'Contribuições', 'Projeto']).size().res
 temp = []
 temp2 = []
 
-#aux = 0
+aux = 0
 #outro = 0
 #temp.append(0)
 #temp2.append(criacao['Criado_em_Ano'][0])
@@ -240,15 +240,23 @@ for x in range(len(criacao)):
 #        temp[aux] = temp[aux] + (int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
 
     if x != 0 and criacao['Projeto'][x] != criacao['Projeto'][x-1]:
+        print(temp, temp2)
         plt.bar(temp, temp2)
         plt.title(criacao['Projeto'][x-1])
         plt.show()
         temp = []
         temp2 = []
+        temp.append(criacao['Criado_em_Ano'][x])
+        temp2.append(int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
+    elif x == 0 or criacao['Criado_em_Ano'][x] != criacao['Criado_em_Ano'][x-1]:
+        temp.append(criacao['Criado_em_Ano'][x])
+        temp2.append(int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
+    else:
+        temp[aux] = temp[aux] + (int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
 
 
     temp.append(criacao['Criado_em_Ano'][x])
-    temp2.append(criacao['Quantidade'][x])
+    temp2.append(int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
 
 plt.title(criacao['Projeto'][len(criacao)-1])
 plt.bar(temp, temp2)
