@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-
 ######################Tratamento das datas################################
 #df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
 
@@ -170,29 +169,87 @@ import numpy as np
 #############################Contribuição po Ano de criação#########################
 df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
 
-criacao = df.groupby(['Criado_em_Ano', 'Contribuições']).size().reset_index(name='Quantidade').groupby(['Criado_em_Ano']).sum().reset_index().sort_values(by=['Criado_em_Ano'], ascending=False).reset_index(drop=True)
+#criacao = df.groupby(['Criado_em_Ano', 'Contribuições']).size().reset_index(name='Quantidade')
 
-print(criacao)
+#print(criacao)
 
-outros = 0
+#aux = 0
+#outro = 0
+#temp = []
+#temp2 = []
+#temp.append(0)
+#temp2.append(criacao['Criado_em_Ano'][0])
+
+#for x in range(len(criacao)):
+#    if criacao['Criado_em_Ano'][x] >= 2019:
+#        outro += (int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
+#    elif x != 0 and criacao['Criado_em_Ano'][x] != criacao['Criado_em_Ano'][x-1]:
+#        aux += 1
+#        temp.append(0)
+#        temp2.append(criacao['Criado_em_Ano'][x])
+#    else:
+#        temp[aux] = temp[aux] + (int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
+
+
+#temp2.append('Outros Anos')
+#temp.append(outro)
+
+#plt.pie(
+#    temp,
+#    labels=temp2,
+#    autopct='%1.1f%%'
+#)
+#plt.show()
+
+##################################################################################
+
+####################################Contribuição po Ano de criação por projeto #######################################
+criacao = df.groupby(['Criado_em_Ano', 'Contribuições', 'Projeto']).size().reset_index(name='Quantidade').sort_values(by=['Projeto', 'Criado_em_Ano'], ascending=False).reset_index(drop=True)
+
+#print(criacao)
+
 temp = []
 temp2 = []
 
+#aux = 0
+#outro = 0
+#temp.append(0)
+#temp2.append(criacao['Criado_em_Ano'][0])
+
 for x in range(len(criacao)):
-    if x < 7:
-        outros = outros + criacao['Contribuições'][x]
-    else:
-        temp.append(criacao['Criado_em_Ano'][x])
-        temp2.append(criacao['Contribuições'][x])
+#    if x != 0 and criacao['Projeto'][x] != criacao['Projeto'][x-1]:
+#        plt.pie(
+#            temp,
+#            labels=temp2,
+#            autopct='%1.1f%%'
+#        )
+#        plt.title(criacao['Projeto'][x - 1])
+#        plt.show()
+#        aux = 0
+#        outro = 0
+#        temp = []
+#        temp2 = []
+#        temp.append(0)
+
+#    if x != 0 and criacao['Criado_em_Ano'][x] != criacao['Criado_em_Ano'][x-1]:
+#        aux += 1
+#        temp.append(0)
+#        temp2.append(criacao['Criado_em_Ano'][x])
+#        temp[aux] = temp[aux] + (int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
+#    else:
+#        temp[aux] = temp[aux] + (int(criacao['Quantidade'][x]) * int(criacao['Contribuições'][x]))
+
+    if x != 0 and criacao['Projeto'][x] != criacao['Projeto'][x-1]:
+        plt.bar(temp, temp2)
+        plt.title(criacao['Projeto'][x-1])
+        plt.show()
+        temp = []
+        temp2 = []
 
 
-temp.append('Outros Anos')
-temp2.append(outros)
+    temp.append(criacao['Criado_em_Ano'][x])
+    temp2.append(criacao['Quantidade'][x])
 
-plt.pie(
-    temp2,
-    labels=temp,
-    autopct='%1.1f%%',
-#    explode=(0.2, 0.2, 0.2),
-)
+plt.title(criacao['Projeto'][len(criacao)-1])
+plt.bar(temp, temp2)
 plt.show()
