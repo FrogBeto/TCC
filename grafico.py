@@ -28,7 +28,15 @@ df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
 #################Grafico geral dos países########################
 paises = df.groupby(['País']).sum().reset_index().sort_values('Contribuições', ascending=False).reset_index(drop=True)
 
-plt.bar(paises['País'], paises['Contribuições'], zorder=2)
+temp = []
+temp2 = []
+
+for x in range(len(paises)):
+    if paises['País'][x] != "<null>":
+        temp.append(paises['País'][x])
+        temp2.append(paises['Contribuições'][x])
+
+plt.bar(temp, temp2, zorder=2)
 plt.title("Contribuições por País")
 plt.xlabel("Países")
 plt.ylabel("Número de contribuições")
@@ -43,7 +51,6 @@ temp = []
 temp2 = []
 
 for x in range(len(paises)):
-
     if x != 0 and paises['Projeto'][x] != paises['Projeto'][x-1]:
         plt.bar(temp, temp2, zorder=2)
         plt.title("Contribuições por País - " + paises['Projeto'][x-1])
@@ -54,8 +61,9 @@ for x in range(len(paises)):
         temp = []
         temp2 = []
 
-    temp.append(paises['País'][x])
-    temp2.append(paises['Contribuições'][x])
+    if paises['País'][x] != "<null>":
+        temp.append(paises['País'][x])
+        temp2.append(paises['Contribuições'][x])
 
 
 plt.title("Contribuições por País - " + paises['Projeto'][len(paises)-1])
