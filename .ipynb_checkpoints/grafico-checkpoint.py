@@ -1,27 +1,31 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
+
 ######################Tratamento das datas################################
-df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
+#df = pd.read_csv('CSVs/Dados Finais/dados.csv', sep=';')
 
-df['Atualizado_em'] = pd.to_datetime(df['Atualizado_em'], format="%Y-%m-%d").dt.date
+#df['Atualizado_em'] = pd.to_datetime(df['Atualizado_em'], format="%Y-%m-%d").dt.date
 
-df['Atualizado_em_Ano'] = pd.to_datetime(df['Atualizado_em']).dt.year
-df['Atualizado_em_Mes'] = pd.to_datetime(df['Atualizado_em']).dt.month
-df['Atualizado_em_Dia'] = pd.to_datetime(df['Atualizado_em']).dt.day
+#df['Atualizado_em_Ano'] = pd.to_datetime(df['Atualizado_em']).dt.year
+#df['Atualizado_em_Mes'] = pd.to_datetime(df['Atualizado_em']).dt.month
+#df['Atualizado_em_Dia'] = pd.to_datetime(df['Atualizado_em']).dt.day
 
-df['Criado_em'] = pd.to_datetime(df['Criado_em'], format="%Y-%m-%d").dt.date
+#df['Criado_em'] = pd.to_datetime(df['Criado_em'], format="%Y-%m-%d").dt.date
 
-df['Criado_em_Ano'] = pd.to_datetime(df['Criado_em']).dt.year
-df['Criado_em_Mes'] = pd.to_datetime(df['Criado_em']).dt.month
-df['Criado_em_Dia'] = pd.to_datetime(df['Criado_em']).dt.day
+#df['Criado_em_Ano'] = pd.to_datetime(df['Criado_em']).dt.year
+#df['Criado_em_Mes'] = pd.to_datetime(df['Criado_em']).dt.month
+#df['Criado_em_Dia'] = pd.to_datetime(df['Criado_em']).dt.day
 
-df.to_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';', index=False)
+#for x in range(5):
+#    print(df['Criado_em'][x], df['Criado_em_Ano'][x], df['Criado_em_Mes'][x], df['Criado_em_Dia'][x],
+#          df['Atualizado_em'][x], df['Atualizado_em_Ano'][x], df['Atualizado_em_Mes'][x], df['Atualizado_em_Dia'][x])
+
+#df.to_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';', index=False)
 
 
 #################Grafico geral dos países########################
-df = pd.read_csv('CSVs/Dados Finais/dadosFinais2.csv', sep=';')
-
 paises = df.groupby(['País']).sum().reset_index().sort_values('Contribuições', ascending=False).reset_index(drop=True)
 
 temp = []
